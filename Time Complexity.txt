@@ -1,0 +1,19 @@
+ Here's a general breakdown of the time complexity for different parts of the code:
+
+1. Reading Input: O(N^2)
+   - The input consists of N lines, each containing 2N space-separated integers.
+   - Reading these integers would take O(N^2) time.
+
+2. Constructing the Bash Matrix: O(N^2)
+   - The Bash matrix is an N by N matrix, so constructing it would take O(N^2) time.
+
+3. Checking Validity of the Bash Matrix: O(N^2)
+   - To check the validity of the Bash matrix, we need to simulate Chef's movement based on the instructions in each cell.
+   - This would require traversing each cell of the matrix, resulting in a time complexity of O(N^2).
+
+4. Finding the Minimum Cost: O(N)
+   - To find the minimum cost, we need to iterate over each character in the Bash matrix and sum up the corresponding costs.
+   - Since the Bash matrix has N rows and N columns, the total number of characters is N^2.
+   - Thus, finding the minimum cost would take O(N^2) time.
+
+Overall, the dominant factor in the time complexity would be O(N^2) due to the simulation of Chef's movement and the finding of the minimum cost. The other parts, such as input reading and matrix construction, have a time complexity of O(N^2) as well but have a lesser impact on the overall complexity.
