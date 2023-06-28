@@ -1,0 +1,9 @@
+The problem is asking you to construct a Bash matrix based on a given set of notes. A Bash matrix is an N by N matrix where each cell contains one of the characters 'U', 'D', 'L', or 'R'. The goal is to find the smallest possible cost for the matrix that satisfies the given notes.
+
+The notes indicate the path Chef took in the matrix. He starts in a cell and follows the instructions in each cell until he either reaches a previously visited cell or leaves the matrix. The stopping cell is the first cell he visits twice during this process.
+
+The input consists of the matrix size N, followed by the costs for each character ('U', 'L', 'D', 'R'), and the coordinates for each cell in the matrix. The coordinates indicate the row and column of the cells that Chef visited in his path.
+
+The output should be the minimum cost of the Bash matrix and the matrix itself, represented as N+1 lines. Each line represents a row in the matrix.
+
+If it is not possible to construct a Bash matrix that satisfies the given notes, the output should be -1.
