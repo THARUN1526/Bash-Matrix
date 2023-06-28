@@ -1,0 +1,64 @@
+The provided code appears to be implementing a solution for joining cells in a matrix into cycles while minimizing the cost. Each cell in the matrix represents a node, and the cells are connected by neighboring cells in four directions: up, down, left, and right. The goal is to join cells together to form cycles by assigning a direction to each cell. The direction determines which neighboring cell the current cell connects to.
+
+The algorithm includes several helper methods and a main method called `trySmartJoinCellToCycles`, which attempts to join cells to an existing cycle while minimizing the cost. The algorithm follows a greedy approach, trying to find the best path to join cells together.
+
+Here's a breakdown of the provided code:
+
+1. The code defines a `Direction` enum to represent the four possible directions: Up, Down, Left, and Right.
+
+2. The `Cell` class represents a cell in the matrix. It stores the row and column indices of the cell, the direction assigned to the cell, and the indices of the cell where the cycle ends.
+
+3. The `findCycledToItselfCells` method iterates over the matrix and finds cells that form cycles with themselves (endCycleRow == row and endCycleCol == col). It returns a list of these cells.
+
+4. The `leftNeighbour`, `rightNeighbour`, `upNeighbour`, and `downNeighbour` methods return the neighboring cells of a given cell in the specified direction.
+
+5. The `joinSelfCycled` method attempts to join cells that cycle to themselves. It iterates over the cells and tries to find neighboring cells to join. It uses a set called `cellSet` to keep track of cells that have not been joined yet. The method follows specific rules to determine the best direction to join cells together.
+
+6. The `countCost` method calculates the total cost of joining cells in the matrix. It iterates over the matrix and sums up the costs based on the assigned directions of the cells.
+
+7. The `sameCycle` method checks if two cells belong to the same cycle. It compares the endCycleRow and endCycleCol of the cells.
+
+8. The `Path` class represents a path of joined cells. It stores the visited cells, the directions of the joined cells, the last cell in the path, and the total cost of the path.
+
+9. The `chooseAnyNonVisited` method returns any non-visited cell from a set of cells.
+
+10. The `gcd` method calculates the greatest common divisor of two numbers using the Euclidean algorithm.
+
+11. The `lcm` method calculates the least common multiple of two numbers using the formula: lcm(a, b) = a * (b / gcd(a, b)).
+
+12. The `compareResults` method compares the total costs and counts of two paths to determine their relative ordering.
+
+13. The `trySmartJoinCellToCycles` method attempts to join cells to an existing cycle while minimizing the cost. It uses a priority queue of paths to explore different possibilities. The method iteratively expands the paths until all cells are joined. It chooses the best path based on the total cost and count of joined cells.
+
+14. The code snippet provided is incomplete, and there are additional parts missing, such as the remaining implementation of the `trySmartJoinCellToCycles` method.
+
+Overall, the code aims to solve a combinatorial optimization problem of joining cells in a matrix into cycles with minimal cost. However, without the complete implementation and additional context, it is difficult to provide a more detailed explanation of the algorithm's logic and functionality.
+Here's a breakdown of the provided code:
+
+1. The code defines a `Direction` enum to represent the four possible directions: Up, Down, Left, and Right.
+
+2. The `Cell` class represents a cell in the matrix. It stores the row and column indices of the cell, the direction assigned to the cell, and the indices of the cell where the cycle ends.
+
+3. The `findCycledToItselfCells` method iterates over the matrix and finds cells that form cycles with themselves (endCycleRow == row and endCycleCol == col). It returns a list of these cells.
+
+4. The `leftNeighbour`, `rightNeighbour`, `upNeighbour`, and `downNeighbour` methods return the neighboring cells of a given cell in the specified direction.
+
+5. The `joinSelfCycled` method attempts to join cells that cycle to themselves. It iterates over the cells and tries to find neighboring cells to join. It uses a set called `cellSet` to keep track of cells that have not been joined yet. The method follows specific rules to determine the best direction to join cells together.
+
+6. The `countCost` method calculates the total cost of joining cells in the matrix. It iterates over the matrix and sums up the costs based on the assigned directions of the cells.
+
+7. The `sameCycle` method checks if two cells belong to the same cycle. It compares the endCycleRow and endCycleCol of the cells.
+
+8. The `Path` class represents a path of joined cells. It stores the visited cells, the directions of the joined cells, the last cell in the path, and the total cost of the path.
+
+9. The `chooseAnyNonVisited` method returns any non-visited cell from a set of cells.
+
+10. The `gcd` method calculates the greatest common divisor of two numbers using the Euclidean algorithm.
+
+11. The `lcm` method calculates the least common multiple of two numbers using the formula: lcm(a, b) = a * (b / gcd(a, b)).
+
+12. The `compareResults` method compares the total costs and counts of two paths to determine their relative ordering.
+
+13. The `trySmartJoinCellToCycles` method attempts to join cells to an existing cycle while minimizing the cost. It uses a priority queue of paths to explore different possibilities. The method iteratively expands the paths until all cells are joined. It chooses the best path based on the total cost and count of joined cells.
+
+14. The code snippet provided is incomplete, and there are additional parts missing, such as the remaining implementation of the `trySmartJoinCellToCycles` method.
